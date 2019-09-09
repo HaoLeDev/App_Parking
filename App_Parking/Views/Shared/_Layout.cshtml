@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    @*@Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")*@
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Assets/content-admin/css/AdminLTE.min.css" rel="stylesheet" />
+    <link href="~/Assets/content-admin/css/_all-skins.min.css" rel="stylesheet" />>
+    <link href="~/Assets/content-admin/Ionicons/css/ionicons.min.css" rel="stylesheet" />
+    <link href="~/Assets/content-admin/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+</head>
+
+<body class="hold-transition skin-blue fixed sidebar-mini">
+    <div class="wrapper">
+        <header class="main-header">
+            @{Html.RenderPartial("~/Views/Shared/_top_nav_bar.cshtml");}
+        </header>
+        <aside class="main-sidebar">
+            @{Html.RenderPartial("~/Views/Shared/_siderbar.cshtml");}
+        </aside>
+        <div class="content-wrapper">
+            @RenderBody()
+        </div>
+        <footer class="main-footer">
+            <div class="pull-right hidden-xs">
+                <b>Version</b> 2.4.18
+            </div>
+            <strong>Copyright &copy; 2014-2019 <a href="https://adminlte.io">Admin</a>.</strong> All rights
+            reserved.
+        </footer>
+        <div class="control-sidebar-bg"></div>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <script src="~/Assets/fontawesome/js/fontawesome.min.js"></script>
+    <script src="~/Assets/js-admin/adminlte.min.js"></script>
+    <script src="~/Assets/js-admin/demo.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>
