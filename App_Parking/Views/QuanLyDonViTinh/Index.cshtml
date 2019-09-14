@@ -1,0 +1,114 @@
+﻿
+@{
+    ViewBag.Title = "Quản lý đơn vị tính";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <script src="~/Scripts/Js-Business/QuanLyDonViTinh.js"></script>
+<section class="content-header">
+    <div class="col-md-4">
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-home"></i> Trang chủ</a></li>
+            <li><a href="#">Quản lý đơn vị tính</a></li>
+        </ol>
+    </div>
+</section>
+<div class="col-md-12">
+    <div class=" box">
+        <div class="box-header">
+            <h4>Quản lý đơn vị tính</h4>
+        </div>
+        <div class=" box-body">
+            <div class="col-md-12">
+                <div class="col-md-4">
+                    <button class="btn btn-primary" data-target="#myModal" data-toggle="modal" id="btnAdd"><i class="fa fa-plus"></i> Thêm mới</button>
+                    <button class="btn btn-success"><i class="fa fa-file-excel-o"></i> Xuất ra file Excel</button>
+                </div>
+
+                <div class="col-md-8">
+                    <div class="input-group pull-right col-sm-8">
+                        <input type="text" placeholder="Nhập để tìm kiếm..." class="form-control" /><a href="" class="input-group-addon"><i class="fa fa-search"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="col-md-12">
+                <div class="row" id=" printDiv">
+                    <div class="col-md-12">
+                        <table id="tblUnit" class=" table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Mã đơn vị</th>
+                                    <th>Tên đơn vị</th>
+                                    <th>Mô tả</th>
+                                    <th>Trạng thái</th>
+                                    <th>Chức năng</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+<div class="modal fade active bs-example-modal-xs " id="myModal" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 id="title">Thêm đơn vị tính</h4>
+            </div>
+            <div class="modal-body">
+
+                <input type="hidden" id="txtId" />
+                <div class="row">
+                    <div class="col-lg-4">
+                        <label for="txtMaDonVi">Mã đơn vị</label>
+                    </div>
+                    <div class="col-lg-8">
+                        <input type="text" class="form-control" id="txtMaDonVi" placeholder="Vui lòng nhập mã đơn vị..." />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <label for="txtTenDonVi">Tên đơn vị</label>
+                    </div>
+                    <div class="col-lg-8">
+                        <input type="text" class="form-control" id="txtTenDonVi" placeholder="Vui lòng nhập tên đơn vị..." />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-4">
+                        <label for="txtMoTa">Mô tả</label>
+                    </div>
+                    <div class="col-lg-8">
+                        <textarea rows="4" id="txtMoTa" class="form-control" placeholder="Vui lòng nhập mô tả..." cols="50"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <label for="ckTrangThai">Trạng thái</label>
+                    </div>
+                    <div class="col-lg-8">
+                       <input type="checkbox" class="custom" id="ckTrangThai" />
+                    </div>
+                </div>
+                <div class="row chucNang">
+                    <div class="col-sm-4 col-sm-offset-8">
+                        <div class="row inline">
+                            <div class="btn btn-primary" id="btnUpdate">
+                                <i class="fa fa-save"></i> Lưu
+                            </div>
+                            <div class="btn btn-danger" id="Close" data-dismiss="modal">
+                                <i class="glyphicon glyphicon-remove"></i> Hủy
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

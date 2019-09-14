@@ -1,5 +1,4 @@
 ﻿using BusinessEntities;
-using BusinessObject.Context;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,29 +9,30 @@ namespace DA
 {
     public class UserDA
     {
-        PandaDbcontext db = null;
+        TICKET_MANAGEREntities3 db = null;
         public UserDA()
         {
-            db = new PandaDbcontext();
+            db = new TICKET_MANAGEREntities3();
+            db.Configuration.ProxyCreationEnabled = false;
         }
         public int Login(string userName, string password)
         {
-            var result = db.Accounts.SingleOrDefault(a => a.UserName == userName);
+            var result = db.ACCOUNTS.SingleOrDefault(a => a.ACC_USERNAME == userName);
             if (result == null)
             {
                 return 0;
             }
             else
             {
-                if (result.Password == password)
+                if (result.ACC_PASSWORD == password)
                     return 1;
                 else
                     return -2;
             }
         }
-        public Account GetById(string userName)
+        public ACCOUNT GetById(string userName)
         {
-            return db.Accounts.SingleOrDefault(x => x.UserName == userName);
+            return db.ACCOUNTS.SingleOrDefault(x => x.ACC_USERNAME == userName);
         }
     }
 }

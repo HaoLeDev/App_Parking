@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c885fdb04bee4457a12c242ae965f2cc" Name="Diagram1">
+        <EntityTypeShape EntityType="TICKET_MANAGERModel.ACCOUNT" Width="1.5" PointX="14" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TICKET_MANAGERModel.BARCODE" Width="1.5" PointX="3" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TICKET_MANAGERModel.CARD_NO" Width="1.5" PointX="6" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="TICKET_MANAGERModel.CARD_TYPE" Width="1.5" PointX="0.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TICKET_MANAGERModel.CONTROLLER" Width="1.5" PointX="9" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TICKET_MANAGERModel.DEPARTMENT" Width="1.5" PointX="9.5" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TICKET_MANAGERModel.DETAIL_SALE" Width="1.5" PointX="8.25" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TICKET_MANAGERModel.DEVICE" Width="1.5" PointX="16.25" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TICKET_MANAGERModel.DEVICE_TYPE" Width="1.5" PointX="14" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TICKET_MANAGERModel.DISCOUNT" Width="1.5" PointX="3.75" PointY="24.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TICKET_MANAGERModel.DISCOUNT_TYPE" Width="1.5" PointX="1.5" PointY="25.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TICKET_MANAGERModel.EMPLOYEE" Width="1.5" PointX="11.75" PointY="18" IsExpanded="true" />
+        <EntityTypeShape EntityType="TICKET_MANAGERModel.GAME_SPORT" Width="1.5" PointX="13.75" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TICKET_MANAGERModel.HOLIDAY" Width="1.5" PointX="0.75" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TICKET_MANAGERModel.IO_INFO" Width="1.5" PointX="11.25" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TICKET_MANAGERModel.MENULIST" Width="1.5" PointX="11.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TICKET_MANAGERModel.PRIVILE" Width="1.5" PointX="11.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TICKET_MANAGERModel.SALE_NO" Width="1.5" PointX="3.75" PointY="29" IsExpanded="true" />
+        <EntityTypeShape EntityType="TICKET_MANAGERModel.sysdiagram" Width="1.5" PointX="5.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TICKET_MANAGERModel.TICKET_PRICE" Width="1.5" PointX="3" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TICKET_MANAGERModel.TICKET_SALE" Width="1.5" PointX="6" PointY="26.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TICKET_MANAGERModel.TICKET_TYPE" Width="1.5" PointX="0.75" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TICKET_MANAGERModel.TIME_FRAME" Width="1.5" PointX="0.75" PointY="17.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TICKET_MANAGERModel.TIME_FRAME_ACTIVE" Width="1.5" PointX="9" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TICKET_MANAGERModel.UNIT" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TICKET_MANAGERModel.USER_INFO" Width="1.5" PointX="16" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="TICKET_MANAGERModel.USER_TYPE" Width="1.5" PointX="13.75" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TICKET_MANAGERModel.VISIBLECONTROL" Width="1.5" PointX="14" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TICKET_MANAGERModel.WEEKDAY" Width="1.5" PointX="0.75" PointY="21.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TICKET_MANAGERModel.ZONE" Width="1.5" PointX="0.75" PointY="2.625" IsExpanded="true" />
+        <AssociationConnector Association="TICKET_MANAGERModel.FK_ACCOUNTS_EMPLOYEES" ManuallyRouted="false" />
+        <AssociationConnector Association="TICKET_MANAGERModel.FK_ACCOUNTS_PRIVILES" ManuallyRouted="false" />
+        <AssociationConnector Association="TICKET_MANAGERModel.FK_BARCODE_CARD_TYPE" ManuallyRouted="false" />
+        <AssociationConnector Association="TICKET_MANAGERModel.FK_BARCODE_TICKET_TYPE" ManuallyRouted="false" />
+        <AssociationConnector Association="TICKET_MANAGERModel.FK_BARCODE_ZONE" ManuallyRouted="false" />
+        <AssociationConnector Association="TICKET_MANAGERModel.FK_DETAIL_SALE_BARCODE" ManuallyRouted="false" />
+        <AssociationConnector Association="TICKET_MANAGERModel.FK_IO_INFO_BARCODE" ManuallyRouted="false" />
+        <AssociationConnector Association="TICKET_MANAGERModel.FK_CARD_NO_CARD_TYPE" ManuallyRouted="false" />
+        <AssociationConnector Association="TICKET_MANAGERModel.FK_CARD_NO_TICKET_TYPE" ManuallyRouted="false" />
+        <AssociationConnector Association="TICKET_MANAGERModel.FK_DETAIL_SALE_CARD_NO" ManuallyRouted="false" />
+        <AssociationConnector Association="TICKET_MANAGERModel.FK_IO_INFO_CARD_NO" ManuallyRouted="false" />
+        <AssociationConnector Association="TICKET_MANAGERModel.FK_TICKET_PRICE_CARD_TYPE" ManuallyRouted="false" />
+        <AssociationConnector Association="TICKET_MANAGERModel.FK_CONTROLLER_ZONE" ManuallyRouted="false" />
+        <AssociationConnector Association="TICKET_MANAGERModel.FK_DEVICE_CONTROLLER" ManuallyRouted="false" />
+        <AssociationConnector Association="TICKET_MANAGERModel.FK_IO_INFO_CONTROLLER" ManuallyRouted="false" />
+        <AssociationConnector Association="TICKET_MANAGERModel.FK_EMPLOYEES_DEPARTMENT" ManuallyRouted="false" />
+        <AssociationConnector Association="TICKET_MANAGERModel.FK_DETAIL_SALE_TICKET_SALE" ManuallyRouted="false" />
+        <AssociationConnector Association="TICKET_MANAGERModel.FK_DEVICE_DEVICE_TYPE" ManuallyRouted="false" />
+        <AssociationConnector Association="TICKET_MANAGERModel.FK_DISCOUNT_DISCOUNT_TYPE" ManuallyRouted="false" />
+        <AssociationConnector Association="TICKET_MANAGERModel.FK_TICKET_SALE_DISCOUNT" ManuallyRouted="false" />
+        <AssociationConnector Association="TICKET_MANAGERModel.FK_USER_INFO_GAME__SPORT" ManuallyRouted="false" />
+        <AssociationConnector Association="TICKET_MANAGERModel.FK_TICKET_PRICE_HOLIDAY" ManuallyRouted="false" />
+        <AssociationConnector Association="TICKET_MANAGERModel.FK_IO_INFO_TIME_FRAME_ACTIVE" ManuallyRouted="false" />
+        <AssociationConnector Association="TICKET_MANAGERModel.FK_VISIBLECONTROLS_MENULIST" ManuallyRouted="false" />
+        <AssociationConnector Association="TICKET_MANAGERModel.FK_VISIBLECONTROLS_PRIVILES" ManuallyRouted="false" />
+        <AssociationConnector Association="TICKET_MANAGERModel.FK_TICKET_SALE_SALE_NO" ManuallyRouted="false" />
+        <AssociationConnector Association="TICKET_MANAGERModel.FK_TICKET_PRICE_TICKET_TYPE" ManuallyRouted="false" />
+        <AssociationConnector Association="TICKET_MANAGERModel.FK_TICKET_PRICE_TIME_FRAME" ManuallyRouted="false" />
+        <AssociationConnector Association="TICKET_MANAGERModel.FK_TICKET_PRICE_WEEKDAYS" ManuallyRouted="false" />
+        <AssociationConnector Association="TICKET_MANAGERModel.FK_USER_INFO_USER_TYPE" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -21,3 +21,7 @@ alertmsg.NotificationBootbox = function (content, isReload) {
         }, 3000);
     }
 };
+alertmsg.init = function () { };
+$(document).ready(function () {
+    alertmsg.init();
+})

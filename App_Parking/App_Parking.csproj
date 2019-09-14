@@ -56,6 +56,9 @@
       <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="RestSharp, Version=106.6.10.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.106.6.10\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -128,24 +131,58 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Common\CommonConstants.cs" />
+    <Compile Include="Common\JqueryDataTableParamModel.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\QuanLyDonViTinhController.cs" />
+    <Compile Include="Controllers\QuanLyKhachHangController.cs" />
+    <Compile Include="Controllers\TicketTypeManagerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\LoginModel.cs" />
+    <Compile Include="Models\TicketTypeModel.cs" />
+    <Compile Include="Models\UnitModel.cs" />
+    <Compile Include="Models\USER_INFOModel.cs" />
+    <Compile Include="Models\USER_INFOViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\content-admin\css\notify.css" />
+    <Content Include="Assets\content-admin\css\prettify.css" />
+    <Content Include="Assets\content-admin\css\select2.min.css" />
+    <Content Include="Assets\content-admin\css\Style.css" />
     <Content Include="Assets\js-admin\js-login\js-Login.js" />
+    <Content Include="Assets\js-admin\notify.js" />
+    <Content Include="Assets\js-admin\prettify.js" />
+    <Content Include="Assets\js-admin\select2.min.js" />
+    <Content Include="CommonJs\alertifyjs\alertify.js" />
+    <Content Include="CommonJs\alertifyjs\alertify.min.js" />
+    <Content Include="CommonJs\alertifyjs\css\alertify.css" />
+    <Content Include="CommonJs\alertifyjs\css\alertify.min.css" />
+    <Content Include="CommonJs\alertifyjs\css\alertify.rtl.css" />
+    <Content Include="CommonJs\alertifyjs\css\alertify.rtl.min.css" />
+    <Content Include="CommonJs\alertifyjs\css\themes\bootstrap.css" />
+    <Content Include="CommonJs\alertifyjs\css\themes\bootstrap.min.css" />
+    <Content Include="CommonJs\alertifyjs\css\themes\bootstrap.rtl.css" />
+    <Content Include="CommonJs\alertifyjs\css\themes\bootstrap.rtl.min.css" />
+    <Content Include="CommonJs\alertifyjs\css\themes\default.css" />
+    <Content Include="CommonJs\alertifyjs\css\themes\default.min.css" />
+    <Content Include="CommonJs\alertifyjs\css\themes\default.rtl.css" />
+    <Content Include="CommonJs\alertifyjs\css\themes\default.rtl.min.css" />
+    <Content Include="CommonJs\alertifyjs\css\themes\semantic.css" />
+    <Content Include="CommonJs\alertifyjs\css\themes\semantic.min.css" />
+    <Content Include="CommonJs\alertifyjs\css\themes\semantic.rtl.css" />
+    <Content Include="CommonJs\alertifyjs\css\themes\semantic.rtl.min.css" />
     <Content Include="CommonJs\commonJs.js" />
     <Content Include="CommonJs\notifications\notification.css" />
     <Content Include="CommonJs\notifications\notifications.js" />
     <Content Include="CommonJs\notifications\notify-metro.js" />
     <Content Include="CommonJs\notifications\notify.min.js" />
     <Content Include="CommonJs\notify.min.js" />
+    <Content Include="Content\bootstrap-datepicker.min.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -3238,12 +3275,14 @@
     <Content Include="Assets\img\user6-128x128.jpg" />
     <Content Include="Assets\img\user7-128x128.jpg" />
     <Content Include="Assets\img\user8-128x128.jpg" />
+    <Content Include="Content\datatables.min.css" />
     <Content Include="Content\validation.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootbox.all.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Assets\fontawesome\less\brands.less" />
@@ -3355,11 +3394,13 @@
     <Content Include="Assets\content-admin\Ionicons\scss\_ionicons-icons.scss" />
     <Content Include="Assets\content-admin\Ionicons\scss\_ionicons-variables.scss" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\datatables.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -3373,7 +3414,11 @@
     <Content Include="Assets\js-admin\jquery-ui.min.js" />
     <Content Include="Assets\js-admin\jquery.inputmask.js" />
     <Content Include="Scripts\Js-Business\js-Dashboard1.js" />
+    <Content Include="Scripts\Js-Business\Js_QuanLyKhachHang.js" />
+    <Content Include="Scripts\Js-Business\Js_TicketType.js" />
     <Content Include="Scripts\Js-Business\Login.js" />
+    <Content Include="Scripts\Js-Business\QuanLyDonViTinh.js" />
+    <Content Include="Scripts\Js-Business\QuanLyLoaiVe1.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\validation.es6.js" />
     <Content Include="Views\Login\Index1.cshtml" />
@@ -3396,10 +3441,15 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Dashboard\Dashboard.cshtml" />
+    <Content Include="Views\TicketTypeManager\Index.cshtml" />
+    <Content Include="Views\QuanLyKhachHang\Index.cshtml" />
+    <Content Include="Views\QuanLyDonViTinh\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\BaseController\" />
+    <Folder Include="Views\QuanLyKhacHang\" />
+    <Folder Include="Views\TicketType\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

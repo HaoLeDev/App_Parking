@@ -3,7 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin</title>
+    <title>@ViewBag.title</title>
+    @*<script src="~/Scripts/jquery-3.3.1.min.js"></script>*@
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
     @*@Styles.Render("~/Content/css")
         @Scripts.Render("~/bundles/modernizr")*@
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
@@ -11,7 +13,16 @@
     <link href="~/Assets/content-admin/css/_all-skins.min.css" rel="stylesheet" />>
     <link href="~/Assets/content-admin/Ionicons/css/ionicons.min.css" rel="stylesheet" />
     <link href="~/Assets/content-admin/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/datatables.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    <link href="~/CommonJs/notifications/notification.css" rel="stylesheet" />
+    <link href="~/Assets/content-admin/css/Style.css" rel="stylesheet" />
+    <link href="~/Assets/content-admin/css/select2.min.css" rel="stylesheet" />
+    <link href="~/CommonJs/alertifyjs/css/alertify.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-datepicker.min.css" rel="stylesheet" />
+    <script src="~/Scripts/bootbox.all.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/datatables.min.js"></script>
 </head>
 
 <body class="hold-transition skin-blue fixed sidebar-mini">
@@ -35,11 +46,20 @@
         <div class="control-sidebar-bg"></div>
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+    @*@Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")*@
+
+
     <script src="~/Assets/fontawesome/js/fontawesome.min.js"></script>
     <script src="~/Assets/js-admin/adminlte.min.js"></script>
-    <script src="~/Assets/js-admin/demo.js"></script>
+    @*<script src="~/Assets/js-admin/demo.js"></script>*@
+    <script src="~/Assets/js-admin/select2.min.js"></script>
+    @*<script src="~/CommonJs/notifications/notify.min.js"></script>
+        <script src="~/CommonJs/notifications/notify-metro.js"></script>
+        <script src="~/CommonJs/notifications/notifications.js"></script>
+        <script src="~/CommonJs/commonJs.js"></script>*@
+    <script src="~/Scripts/bootstrap-datepicker.min.js"></script>
+    <script src="~/CommonJs/alertifyjs/alertify.min.js"></script>
     @RenderSection("scripts", required: false)
 </body>
 </html>

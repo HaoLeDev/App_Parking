@@ -10,10 +10,13 @@ namespace App_Parking.Controllers
 {
     public class BaseController : Controller
     {
+        protected string menuName;
+        protected int priID;
+        protected TICKET_MANAGEREntities3 db;
         // GET: BaseController
         protected override void OnActionExecuting(ActionExecutingContext filterContext)
         {       
-            var session = (Account)Session["USER_SESSION"];
+            var session = (ACCOUNT)Session["USER_SESSION"];
             if (session == null)
             {
                 filterContext.Result = new RedirectToRouteResult(

@@ -1,0 +1,26 @@
+﻿.box-header {
+    border-bottom-color: #b9b9b9;
+    border-bottom: solid 1px;
+    background-color: #18a0dc;
+    color: white;
+    height: 80px;
+}
+    .box-header > h4 {
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: bold;
+        line-height: 45px;
+        margin-left:15px;
+    }
+.modal-header{
+    background-color:#0b75cf;
+}
+.modal-header >h4{
+    color:white;
+}
+.row{
+    margin-top:10px;
+}
+.show-display{
+    display:block;
+}

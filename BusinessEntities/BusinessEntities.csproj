@@ -31,6 +31,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
@@ -38,6 +44,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,12 +54,354 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Account.cs" />
-    <Compile Include="BaseEntity.cs" />
+    <Compile Include="ACCOUNT.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BARCODE.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CARD_NO.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CARD_TYPE.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CONTROLLER.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DEPARTMENT.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DETAIL_SALE.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DEVICE.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DEVICE_TYPE.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DISCOUNT.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DISCOUNT_TYPE.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EMPLOYEE.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GAME_SPORT.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HOLIDAY.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IO_INFO.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MENULIST.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="paging_barcodes_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="paging_cardnos_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="paging_departments_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="paging_detail_sales_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="paging_devices_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="paging_employees_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="paging_holiday_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="paging_io_info_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="paging_sale_no_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="paging_ticket_sales_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="paging_user_infos_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="paging_visiblecontrols_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PRIVILE.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SALE_NO.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_account_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_all_accounts_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_all_barcode_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_all_card_no_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_all_card_type_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_all_controller_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_all_department_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_all_detail_sale_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_all_device_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_all_device_type_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_all_discount_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_all_discount_type_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_all_employees_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_all_game_sport_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_all_holiday_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_all_io_info_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_all_menulist_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_all_priviles_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_all_sale_no_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_all_ticket_price_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_all_ticket_sale_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_all_ticket_type_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_all_time_frame_active_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_all_time_frame_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_all_unit_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_all_user_info_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_all_user_type_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_all_visiblecontrols_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_all_weekdays_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_all_zone_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_barcode_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_card_no_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_card_type_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_controller_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_department_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_detail_sale_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_device_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_device_type_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_discount_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_discount_type_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_employees_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_game_sport_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_holiday_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_io_info_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_menulist_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_priviles_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_sale_no_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_ticket_price_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_ticket_sale_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_ticket_type_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_time_frame_active_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_time_frame_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_unit_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_user_info_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_user_type_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_visiblecontrols_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_weekdays_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_zone_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TicketManager.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TicketManager.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TicketManager.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TicketManager.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TicketManager.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="TICKET_PRICE.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TICKET_SALE.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TICKET_TYPE.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TIME_FRAME.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TIME_FRAME_ACTIVE.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UNIT.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="USER_INFO.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="USER_TYPE.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VISIBLECONTROL.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WEEKDAY.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ZONE.cs">
+      <DependentUpon>TicketManager.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.Config" />
     <None Include="packages.config" />
+    <EntityDeploy Include="TicketManager.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TicketManager.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="TicketManager.edmx.diagram">
+      <DependentUpon>TicketManager.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TicketManager.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TicketManager.edmx</DependentUpon>
+      <LastGenOutput>TicketManager.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="TicketManager.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TicketManager.edmx</DependentUpon>
+      <LastGenOutput>TicketManager.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
