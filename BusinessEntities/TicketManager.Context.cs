@@ -48,6 +48,7 @@ namespace BusinessEntities
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<TICKET_PRICE> TICKET_PRICE { get; set; }
         public virtual DbSet<TICKET_SALE> TICKET_SALE { get; set; }
+        public virtual DbSet<MENULIST> MENULIST { get; set; }
         public virtual DbSet<TICKET_TYPE> TICKET_TYPE { get; set; }
         public virtual DbSet<TIME_FRAME> TIME_FRAME { get; set; }
         public virtual DbSet<TIME_FRAME_ACTIVE> TIME_FRAME_ACTIVE { get; set; }
