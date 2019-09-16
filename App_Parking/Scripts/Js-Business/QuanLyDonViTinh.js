@@ -69,10 +69,10 @@ var donvi = function () {
             "sAjaxSource": 'QuanLyDonViTinh/GetAll',
             "lengthMenu": [10, 25, 50],
             "aoColumns": [
-                { "mData": "UNIT_CODE" },
-                { "mData": "UNIT_NAME" },
-                { "mData": "UNIT_DES" },
-                { "mData": "UNIT_STATUS" },
+                { mData: "UNIT_CODE" },
+                { mData: "UNIT_NAME" },
+                { mData: "UNIT_DES" },
+                { mData: "UNIT_STATUS" },
                 {
                     mData: "UNIT_ID",
                     bSortable: false,
@@ -88,13 +88,7 @@ var donvi = function () {
             ],
             "order": [0, 'asc'],
             "rowCallback": function (row, data, dataIndex) {
-                // Get row ID
                 var rowId = data["UNIT_ID"];
-                // If row ID is in the list of selected row IDs
-                //if ($.inArray(rowId, rows_selected) !== -1) {
-                //    $(row).find('input[type="checkbox"]').prop('checked', true);
-                //    $(row).addClass('selected');
-                //}
             },
             "oLanguage": {
                 "sProcessing": "Đang xử lý",

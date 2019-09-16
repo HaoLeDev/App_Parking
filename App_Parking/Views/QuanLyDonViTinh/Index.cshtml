@@ -3,7 +3,7 @@
     ViewBag.Title = "Quản lý đơn vị tính";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-    <script src="~/Scripts/Js-Business/QuanLyDonViTinh.js"></script>
+<script src="~/Scripts/Js-Business/QuanLyDonViTinh.js"></script>
 <section class="content-header">
     <div class="col-md-4">
         <ol class="breadcrumb">
@@ -12,47 +12,40 @@
         </ol>
     </div>
 </section>
-<div class="col-md-12">
     <div class=" box">
         <div class="box-header">
             <h4>Quản lý đơn vị tính</h4>
         </div>
         <div class=" box-body">
-            <div class="col-md-12">
-                <div class="col-md-4">
-                    <button class="btn btn-primary" data-target="#myModal" data-toggle="modal" id="btnAdd"><i class="fa fa-plus"></i> Thêm mới</button>
-                    <button class="btn btn-success"><i class="fa fa-file-excel-o"></i> Xuất ra file Excel</button>
-                </div>
+            <div class="col-md-4">
+                <button type="button" class="btn btn-info fa fa-plus" data-toggle="modal" data-target="#myModal"> Thêm mới</button>
+                <button class="btn btn-success fa fa-file-excel-o"> Xuất ra file Excel</button>
+            </div>
 
-                <div class="col-md-8">
-                    <div class="input-group pull-right col-sm-8">
-                        <input type="text" placeholder="Nhập để tìm kiếm..." class="form-control" /><a href="" class="input-group-addon"><i class="fa fa-search"></i></a>
-                    </div>
+            <div class="col-md-8">
+                <div class="input-group pull-right col-sm-8">
+                    <input type="text" placeholder="Nhập để tìm kiếm..." class="form-control" /><a href="" class="input-group-addon"><i class="fa fa-search"></i></a>
                 </div>
             </div>
-            <div class="clearfix"></div>
-            <div class="col-md-12">
-                <div class="row" id=" printDiv">
-                    <div class="col-md-12">
-                        <table id="tblUnit" class=" table table-bordered">
-                            <thead>
-                                <tr>
-                                    <th>Mã đơn vị</th>
-                                    <th>Tên đơn vị</th>
-                                    <th>Mô tả</th>
-                                    <th>Trạng thái</th>
-                                    <th>Chức năng</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                            </tbody>
-                        </table>
-                    </div>
+            <div class="row" id=" printDiv">
+                <div class="col-md-12">
+                    <table id="tblUnit" class="table table-bordered dataTable table-responsive dt-responsive cellspacing=" 0"">
+                        <thead>
+                            <tr>
+                                <th>Mã đơn vị</th>
+                                <th>Tên đơn vị</th>
+                                <th>Mô tả</th>
+                                <th>Trạng thái</th>
+                                <th>Chức năng</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
     </div>
-</div> 
 <div class="modal fade active bs-example-modal-xs " id="myModal" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -93,7 +86,7 @@
                         <label for="ckTrangThai">Trạng thái</label>
                     </div>
                     <div class="col-lg-8">
-                       <input type="checkbox" class="custom" id="ckTrangThai" />
+                        <input type="checkbox" class="custom" id="ckTrangThai" />
                     </div>
                 </div>
                 <div class="row chucNang">

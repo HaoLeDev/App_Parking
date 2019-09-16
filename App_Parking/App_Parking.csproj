@@ -3275,7 +3275,9 @@
     <Content Include="Assets\img\user6-128x128.jpg" />
     <Content Include="Assets\img\user7-128x128.jpg" />
     <Content Include="Assets\img\user8-128x128.jpg" />
+    <Content Include="Content\dataTables.bootstrap.min.css" />
     <Content Include="Content\datatables.min.css" />
+    <Content Include="Content\dataTables.responsive.css" />
     <Content Include="Content\validation.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -3394,6 +3396,7 @@
     <Content Include="Assets\content-admin\Ionicons\scss\_ionicons-icons.scss" />
     <Content Include="Assets\content-admin\Ionicons\scss\_ionicons-variables.scss" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\dataTables.bootstrap.min.js" />
     <Content Include="Scripts\datatables.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
