@@ -58,21 +58,25 @@ var donvi = function () {
         });
     };
     self.UnitTable = function () {
-        dTable = $("#tblUnit").DataTable({
+        dTable = $('#tblUnit').DataTable({
             "bDestroy": true,
             "processing": true, // for show progress bar
             "serverSide": true, // for process server side
             "bProcessing": true,
-            "iDisplayLength": 10,
+            "iDisplayLength": 20,
             "sDom": 'it<pl>',
             "sPaginationType": "full_numbers",
-            "sAjaxSource": 'QuanLyDonViTinh/GetAll',
-            "lengthMenu": [10, 25, 50],
+            "sAjaxSource":'QuanLyDonViTinh/GetAll',
+            "lengthMenu": [20, 40, 60, 100],
             "aoColumns": [
-                { mData: "UNIT_CODE" },
-                { mData: "UNIT_NAME" },
-                { mData: "UNIT_DES" },
-                { mData: "UNIT_STATUS" },
+                {
+                    mData: "UNIT_CODE"
+                },
+                {
+                    mData: "UNIT_NAME"
+                },
+                { "mData": "UNIT_DES" },
+                { "mData": "UNIT_STATUS", className: "text-center" }, 
                 {
                     mData: "UNIT_ID",
                     bSortable: false,
@@ -88,6 +92,7 @@ var donvi = function () {
             ],
             "order": [0, 'asc'],
             "rowCallback": function (row, data, dataIndex) {
+                // Get row ID
                 var rowId = data["UNIT_ID"];
             },
             "oLanguage": {
@@ -103,7 +108,53 @@ var donvi = function () {
                     "sLast": "Cuối"
                 }
             }
-        }); 
+        });
+        //dTable = $("#tblUnit").DataTable({
+        //    "bDestroy": true,
+        //    "processing": true, // for show progress bar
+        //    "serverSide": true, // for process server side
+        //    "bProcessing": true,
+        //    "iDisplayLength": 10,
+        //    "sDom": 'it<pl>',
+        //    "sPaginationType": "full_numbers",
+        //    "sAjaxSource": 'QuanLyDonViTinh/GetAll',
+        //    "lengthMenu": [10, 25, 50],
+        //    "aoColumns": [
+        //        { mData: "UNIT_CODE" },
+        //        { mData: "UNIT_NAME" },
+        //        { mData: "UNIT_DES" },
+        //        { mData: "UNIT_STATUS" },
+        //        {
+        //            mData: "UNIT_ID",
+        //            bSortable: false,
+        //            width: "80px",
+        //            mRender: function (o) {
+        //                return "<div class='text-center'>" +
+        //                    "<span style='white-space: nowrap;'>" +
+        //                    "<i class='fa fa-edit fw btn btn-info btn-xs' data-target='#myModal' data-toggle='modal' title='Chỉnh sửa'></i>" + " " +
+        //                    "<i class='fa fa-trash fw btn btn-danger btn-xs' title='Xóa'></i>" +
+        //                    "</span></div>";
+        //            }
+        //        }
+        //    ],
+        //    "order": [0, 'asc'],
+        //    "rowCallback": function (row, data, dataIndex) {
+        //        var rowId = data["UNIT_ID"];
+        //    },
+        //    "oLanguage": {
+        //        "sProcessing": "Đang xử lý",
+        //        "sLengthMenu": "Hiển thị _MENU_ Bản ghi",
+        //        "sZeroRecords": "Không tìm thấy bản ghi nào !",
+        //        "sInfo": "Hiển thị _START_ tới _END_ của ( _TOTAL_ bản ghi )",
+        //        "sInfoEmpty": "Không tìm thấy bản ghi nào !",
+        //        "oPaginate": {
+        //            "sFirst": "Đầu",
+        //            "sPrevious": "Trước",
+        //            "sNext": "Sau",
+        //            "sLast": "Cuối"
+        //        }
+        //    }
+        //}); 
     };
     self.Insert = function (Id) {
         var unit1 = {

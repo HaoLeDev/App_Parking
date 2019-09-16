@@ -30,7 +30,26 @@ namespace App_Parking.Controllers
                     string search = model.sSearch.Trim().ToUpper();
                     donvi = donvi.Where(d => (d.UNIT_NAME ?? "").ToUpper().Contains(search) || (d.UNIT_CODE ?? "").ToUpper().Contains(search)).OrderBy(d => d.UNIT_ID);
                 }
-
+                switch (model.iSortCol_0)
+                {
+                    case 1:
+                        {
+                            if (model.sSortDir_0 == "asc")
+                                donvi = donvi.OrderBy(s => s.UNIT_CODE);
+                            else
+                                donvi = donvi.OrderByDescending(s => s.UNIT_CODE);
+                            break;
+                        }
+                    case 2:
+                        {
+                            if (model.sSortDir_0 == "asc")
+                                donvi.OrderBy(s => s.UNIT_NAME);
+                            else
+                                donvi.OrderByDescending(s => s.UNIT_NAME);
+                            break;
+                        }
+                    default: break;
+                }
 
                 var lst = donvi.Skip(model.iDisplayStart).Take(model.iDisplayLength).ToList();
                 int count = db.UNITs.Count();
