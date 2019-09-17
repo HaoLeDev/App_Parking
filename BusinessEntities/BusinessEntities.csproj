@@ -325,6 +325,7 @@
     <Compile Include="sp_helpdiagrams_Result.cs">
       <DependentUpon>TicketManager.tt</DependentUpon>
     </Compile>
+    <Compile Include="Statistic\statistic_Unit.cs" />
     <Compile Include="sysdiagram.cs">
       <DependentUpon>TicketManager.tt</DependentUpon>
     </Compile>
@@ -403,5 +404,6 @@
       <LastGenOutput>TicketManager.cs</LastGenOutput>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -14,7 +14,8 @@ namespace BusinessEntities
     using System.Data.Entity.Infrastructure;
     using System.Data.Entity.Core.Objects;
     using System.Linq;
-    
+    using BusinessEntities.Statistic;
+
     public partial class TICKET_MANAGEREntities3 : DbContext
     {
         public TICKET_MANAGEREntities3()
@@ -58,6 +59,7 @@ namespace BusinessEntities
         public virtual DbSet<VISIBLECONTROL> VISIBLECONTROLS { get; set; }
         public virtual DbSet<WEEKDAY> WEEKDAYS { get; set; }
         public virtual DbSet<ZONE> ZONEs { get; set; }
+        public virtual DbSet<statistic_Unit> Statistic_Units { get; set; }
     
         public virtual int delete_accounts(Nullable<int> aCC_ID)
         {

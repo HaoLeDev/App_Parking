@@ -56,6 +56,48 @@ var donvi = function () {
             });
             e.stopPropagation();
         });
+        $('input.ctrlsearch').on('keyup click', function () {
+            self.searchDonVi();
+        });
+        // Phương thức tìm kiếm trong Jquery datatble
+        self.searchDonVi = function () {
+            $('#tblUnit').DataTable().search(
+                $('.ctrlsearch').val()
+            ).draw();
+        };
+        $('#barbtnNhanVien_btnExport').click(function (e) {
+            bootbox.confirm("Bạn có chắc chắn muốn xuất dữ liệu ra file Excel ?", function (result) {
+                if (result == true) {
+                    //Busy.Block();
+
+                    $.ajax({
+                        url:'QuanLyDonViTinh/ExportToExcel',
+                        data: {},
+                        type: "post",
+                        dataType: 'json',
+                        success: function (data) {
+                            var _dataResult = data.data;
+                            if (data.result == "success") {
+                                if (_dataResult != null) {
+                                    window.location.href = data.data;
+                                }
+                            }
+                            else {
+                                //if (data.result == "error") {
+                                //    $.gritter.add({ title: "Ticket Manager", text: "Chưa xuất được file", image: "/uploads/error.png", class_name: "clean", time: "1500" });
+                                //}
+                                //if (data == 'not permission') {
+                                //    $.gritter.add({ title: "Ticket Manager", text: "Bạn không được quyền xuất file", image: "/uploads/error.png", class_name: "clean", time: "1500" });
+                                //}
+                            }
+
+                            //$.unblockUI();
+                        }
+                    });
+                };
+            });
+        });
+
     };
     self.UnitTable = function () {
         dTable = $('#tblUnit').DataTable({
@@ -76,7 +118,7 @@ var donvi = function () {
                     mData: "UNIT_NAME"
                 },
                 { "mData": "UNIT_DES" },
-                { "mData": "UNIT_STATUS", className: "text-center" }, 
+                { "mData": "strUNIT_STATUS", className: "text-center" }, 
                 {
                     mData: "UNIT_ID",
                     bSortable: false,
