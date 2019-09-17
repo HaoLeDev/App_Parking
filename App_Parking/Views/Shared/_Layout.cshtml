@@ -26,12 +26,13 @@
     <script src="~/Scripts/bootstrap.min.js"></script>
     <script src="~/Scripts/datatables.min.js"></script>
     <script src="~/Scripts/dataTables.bootstrap.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     @*<script src="~/Scripts/jquery.dataTables.min.js"></script>*@
 </head>
 
 <body class="hold-transition skin-blue fixed sidebar-mini">
     <div class="wrapper">
-        
+
         <header class="main-header">
             @{Html.RenderPartial("~/Views/Shared/_top_nav_bar.cshtml");}
         </header>
@@ -61,6 +62,7 @@
     <script src="~/Assets/js-admin/select2.min.js"></script>
     <script src="~/Scripts/bootstrap-datepicker.min.js"></script>
     <script src="~/CommonJs/alertifyjs/alertify.min.js"></script>
+    <script src="~/Scripts/Busy.js"></script>
     @RenderSection("scripts", required: false)
 </body>
 </html>

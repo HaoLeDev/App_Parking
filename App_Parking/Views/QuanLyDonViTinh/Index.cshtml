@@ -19,7 +19,7 @@
         </div>
         <div class=" box-body">
             <div class="col-md-4">
-                <button type="button" class="btn btn-primary btn-lg fa fa-plus" data-toggle="modal" data-target="#myModal"> Thêm mới</button>
+                <button type="button" class="btn btn-primary btn-lg fa fa-plus" id="btnAdd" data-toggle="modal" data-target="#myModal"> Thêm mới</button>
                 <button class="btn btn-success fa fa-file-excel-o btn-lg" id="barbtnNhanVien_btnExport"> Xuất ra file Excel</button>
             </div>
             <div class="col-md-8">
@@ -31,7 +31,7 @@
             <div class="col-md-12">
                 <div class="row" id=" printDiv">
                     <div class="col-md-12">
-                        <table id="tblUnit" class=" table table-bordered table-responsive table-hover">
+                        <table id="tblUnit" class="display table table-bordered table-responsive dt-responsive datatable" style="width:100%">
                             <thead>
                                 <tr>
                                     <th>Mã đơn vị</th>

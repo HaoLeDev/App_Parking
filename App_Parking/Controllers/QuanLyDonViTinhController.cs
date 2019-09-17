@@ -35,7 +35,7 @@ namespace App_Parking.Controllers
                 }
                 switch (model.iSortCol_0)
                 {
-                    case 1:
+                    case 0:
                         {
                             if (model.sSortDir_0 == "asc")
                                 donvi = donvi.OrderBy(s => s.UNIT_CODE);
@@ -43,12 +43,12 @@ namespace App_Parking.Controllers
                                 donvi = donvi.OrderByDescending(s => s.UNIT_CODE);
                             break;
                         }
-                    case 2:
+                    case 1:
                         {
                             if (model.sSortDir_0 == "asc")
-                                donvi.OrderBy(s => s.UNIT_NAME);
+                                donvi = donvi.OrderBy(s => s.UNIT_NAME);
                             else
-                                donvi.OrderByDescending(s => s.UNIT_NAME);
+                                donvi = donvi.OrderByDescending(s => s.UNIT_NAME);
                             break;
                         }
                     default: break;
@@ -163,13 +163,14 @@ namespace App_Parking.Controllers
                     dr["STT"] = i++.ToString();
                     dr["Tên đơn vị"] = item.UNIT_NAME;
                     dr["Mã đơn vị"] = item.UNIT_CODE;
-                    dr["Trạng thái"] = item.UNIT_STATUS;
+                    dr["Trạng thái"] = item.UNIT_STATUS.HasValue ? (item.UNIT_STATUS == true ? "Kích hoạt" : "Chưa kích hoạt") : "Không xác định";
+                    //dr["Trạng thái"] = item.UNIT_STATUS;
                     dtThongKe.Rows.Add(dr);
                 }
                 Random random = new Random();
                 string path = "Thong-ke-Don-Vi" + DateTime.Now.ToString("ddMMyyyy-") + random.Next(1, 99999) + ".xlsx";
-                string filePath = Path.Combine(Server.MapPath("~/upload/files/Excel/"), path);
-                Common.Common.ExportToExcel2(filePath, "Sarica", "DANH SÁCH ĐƠN VỊ", "QuanLyDonVi", "DANH SÁCH ĐƠN VỊ", dtThongKe);
+                string filePath = Path.Combine(Server.MapPath("~/uploads/files/Excel/"), path);
+                Common.Common.ExportToExcel2(filePath, "Sarica", "DANH SÁCH ĐƠN VỊ", "DanhSachDonVi", "DANH SÁCH ĐƠN VỊ", dtThongKe);
                 return Json(new { data = "uploads/files/Excel/" + path, result = "success" }, JsonRequestBehavior.AllowGet);
             }
             catch (Exception ex)

@@ -160,13 +160,23 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\content-admin\css\admin-print-browser.min.css" />
+    <Content Include="Assets\content-admin\css\bootstrap.min.css" />
+    <Content Include="Assets\content-admin\css\dataTables.bootstrap4.min.css" />
+    <Content Include="Assets\content-admin\css\fixedColumns.bootstrap4.min.css" />
     <Content Include="Assets\content-admin\css\notify.css" />
     <Content Include="Assets\content-admin\css\prettify.css" />
+    <Content Include="Assets\content-admin\css\responsive.bootstrap4.min.css" />
     <Content Include="Assets\content-admin\css\select2.min.css" />
     <Content Include="Assets\content-admin\css\Style.css" />
+    <Content Include="Assets\js-admin\bootstrap.min.js" />
+    <Content Include="Assets\content-admin\css\datatables.min.css" />
+    <Content Include="Assets\js-admin\datatables.min.js" />
+    <Content Include="Assets\js-admin\fixedColumns.bootstrap4.min.js" />
+    <Content Include="Assets\js-admin\jquery-3.3.1.min.js" />
     <Content Include="Assets\js-admin\js-login\js-Login.js" />
     <Content Include="Assets\js-admin\notify.js" />
     <Content Include="Assets\js-admin\prettify.js" />
+    <Content Include="Assets\js-admin\responsive.bootstrap4.min.js" />
     <Content Include="Assets\js-admin\select2.min.js" />
     <Content Include="CommonJs\alertifyjs\alertify.js" />
     <Content Include="CommonJs\alertifyjs\alertify.min.js" />
@@ -3406,6 +3416,7 @@
     <Content Include="Assets\content-admin\Ionicons\scss\_ionicons-icons.scss" />
     <Content Include="Assets\content-admin\Ionicons\scss\_ionicons-variables.scss" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\Busy.js" />
     <Content Include="Scripts\dataTables.bootstrap.min.js" />
     <Content Include="Scripts\datatables.min.js" />
     <Content Include="Scripts\fastclick.js" />
@@ -3437,6 +3448,7 @@
     <Content Include="Scripts\Js-Business\ThongKeDonVi.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\validation.es6.js" />
+    <Content Include="uploads\ajaxloader.gif" />
     <Content Include="Views\Login\Index1.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -3445,9 +3457,6 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\_Layout_Login.cshtml" />
@@ -3461,10 +3470,11 @@
     <Content Include="Views\QuanLyKhachHang\Index.cshtml" />
     <Content Include="Views\QuanLyDonViTinh\Index.cshtml" />
     <Content Include="Views\ThongKeDonVi\Index.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="upload\files\Excel\" />
+    <Folder Include="uploads\files\Excel\" />
     <Folder Include="Views\BaseController\" />
     <Folder Include="Views\QuanLyKhacHang\" />
   </ItemGroup>

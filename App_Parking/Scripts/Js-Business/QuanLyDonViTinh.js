@@ -3,9 +3,9 @@ var cur_id = 0;
 var donvi = function () {
     var self = this;
     self.init = function () {
-        self.UnitTable();
+       
         self.UnitFunction();
-        //self.Insert();
+        self.UnitTable();
     }
     self.UnitFunction = function () {
         $("#btnAdd").click(function () {
@@ -36,7 +36,7 @@ var donvi = function () {
             //alert(result);
         });
         $("#btnAdd").click(function () {
-            document.getElementById("myModal").classList.add("show");
+            self.SetDefault();
         });
         $("#btnUpdate").click(function () {
             if (self.ValidateData() == true) {
@@ -68,8 +68,7 @@ var donvi = function () {
         $('#barbtnNhanVien_btnExport').click(function (e) {
             bootbox.confirm("Bạn có chắc chắn muốn xuất dữ liệu ra file Excel ?", function (result) {
                 if (result == true) {
-                    //Busy.Block();
-
+                    Busy.Block();
                     $.ajax({
                         url:'QuanLyDonViTinh/ExportToExcel',
                         data: {},
@@ -79,6 +78,7 @@ var donvi = function () {
                             var _dataResult = data.data;
                             if (data.result == "success") {
                                 if (_dataResult != null) {
+                                    alertify.success("Xuất file Excel thành công!");
                                     window.location.href = data.data;
                                 }
                             }
@@ -91,7 +91,7 @@ var donvi = function () {
                                 //}
                             }
 
-                            //$.unblockUI();
+                            $.unblockUI();
                         }
                     });
                 };
@@ -150,55 +150,10 @@ var donvi = function () {
                     "sLast": "Cuối"
                 }
             }
-        });
-        //dTable = $("#tblUnit").DataTable({
-        //    "bDestroy": true,
-        //    "processing": true, // for show progress bar
-        //    "serverSide": true, // for process server side
-        //    "bProcessing": true,
-        //    "iDisplayLength": 10,
-        //    "sDom": 'it<pl>',
-        //    "sPaginationType": "full_numbers",
-        //    "sAjaxSource": 'QuanLyDonViTinh/GetAll',
-        //    "lengthMenu": [10, 25, 50],
-        //    "aoColumns": [
-        //        { mData: "UNIT_CODE" },
-        //        { mData: "UNIT_NAME" },
-        //        { mData: "UNIT_DES" },
-        //        { mData: "UNIT_STATUS" },
-        //        {
-        //            mData: "UNIT_ID",
-        //            bSortable: false,
-        //            width: "80px",
-        //            mRender: function (o) {
-        //                return "<div class='text-center'>" +
-        //                    "<span style='white-space: nowrap;'>" +
-        //                    "<i class='fa fa-edit fw btn btn-info btn-xs' data-target='#myModal' data-toggle='modal' title='Chỉnh sửa'></i>" + " " +
-        //                    "<i class='fa fa-trash fw btn btn-danger btn-xs' title='Xóa'></i>" +
-        //                    "</span></div>";
-        //            }
-        //        }
-        //    ],
-        //    "order": [0, 'asc'],
-        //    "rowCallback": function (row, data, dataIndex) {
-        //        var rowId = data["UNIT_ID"];
-        //    },
-        //    "oLanguage": {
-        //        "sProcessing": "Đang xử lý",
-        //        "sLengthMenu": "Hiển thị _MENU_ Bản ghi",
-        //        "sZeroRecords": "Không tìm thấy bản ghi nào !",
-        //        "sInfo": "Hiển thị _START_ tới _END_ của ( _TOTAL_ bản ghi )",
-        //        "sInfoEmpty": "Không tìm thấy bản ghi nào !",
-        //        "oPaginate": {
-        //            "sFirst": "Đầu",
-        //            "sPrevious": "Trước",
-        //            "sNext": "Sau",
-        //            "sLast": "Cuối"
-        //        }
-        //    }
-        //}); 
+        });  
     };
     self.Insert = function (Id) {
+        
         var unit1 = {
             UNIT_ID:$("#txtId").val(),
             UNIT_CODE: $("#txtMaDonVi").val(),
@@ -257,8 +212,8 @@ var donvi = function () {
         // self.RemoveToolTip();
         $("#txtMaDonVi").val("");
         $("#txtTenDonVi").val("");
-        $("#ckTrangThai").val("0");
-        $("#txaMoTa").val("");
+        $("#ckTrangThai").prop('checked',true);
+        $("#txtMoTa").val("");
     };
     self.ValidateData = function () {
         var flag = true;
@@ -266,26 +221,17 @@ var donvi = function () {
         // Validate data txtTenLoaiVe: Kiểm tra tính hợp lệ textboxt Tên loại vé
         var title = $('#txtMaDonVi').val();
         if ($.trim(title) == '') {
-            //$($('#txtTenLoaiVe')).tooltip('hide').attr('data-original-title', 'Vui lòng nhập tên loại vé').tooltip('fixTitle').addClass('errorClass');
+            $('#txtMaDonVi').focus();
+            alertify.error("Mã đơn vị không được bỏ trống!");
             flag = false;
-        } else {
-            //$('#txtTenLoaiVe').data("title", "").removeClass("errorClass").tooltip("destroy");
         }
-
-        var maloaive = $('#txtTenDonVi').val();
-        if ($.trim(maloaive) == '') {
-            //$($('#txtMaLoaiVe')).tooltip('hide').attr('data-original-title', 'Vui lòng nhập mã loại vé').tooltip('fixTitle').addClass('errorClass');
+        else if ($('#txtTenDonVi').val() == '') {
+            $('#txtTenDonVi').focus();
+            alertify.error("Tên đơn vị không được bỏ trống!");
             flag = false;
-        } else {
-            //$('#txtMaLoaiVe').data("title", "").removeClass("errorClass").tooltip("destroy");
         }
-
-        //if (flag == false) {
-        //    $('#thongbao span').text('* Dữ liệu trên form thiếu hoặc là không hợp lệ');
-        //    $('#thongbao').show();
-        //}
         return flag;
-    }
+    };
 }
 $(document).ready(function () {
     var DonVi = new donvi();
