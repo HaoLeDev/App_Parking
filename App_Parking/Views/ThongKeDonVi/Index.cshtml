@@ -4,42 +4,46 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <script src="~/Scripts/Js-Business/ThongKeDonVi.js"></script>
-<div class="row">
-    <div class="col-sm-4" style="padding-top:10px">
-        <select id="slStatus" class="form-control">
-            <option value="0">Tất cả</option>
-            <option value="1">Hoạt động</option>
-            <option value="2">Không hoạt động</option>
-        </select>
-    </div>
-    <div class="col-sm-8" style="padding-top:10px; padding-right: 0px">
-        <button class="myBtn btn btn-primary btn-sm" id="btnThongKe"><i class="fa fa-bar-chart" style="color: white; font-size: 14px; margin-left: -5px"></i> Thống kê</button>
-        <button id="btnExportToExcel" class="btn btn-success btn-sm" disabled><i class="fa fa-file-excel-o fa-fw" style="color:white; font-size:14px; margin-left:-5px"></i> Xuất ra file Excel</button>
-        <button id="btnInNoiDung" class="btn btn-warning btn-sm" disabled><i class="glyphicon glyphicon-print" style="color:white; font-size:14px; margin-left:-5px"></i> In nội dung</button>
-    </div>
-</div>
-<div class="row" style="padding-left:20px; padding-right:20px; padding-top:15px">
-    <div class="col-sm-12" style="border-bottom:1px solid orange;"></div>
-</div>
-<div class="row" style="margin:5px; margin-top:5px;" id="printDiv">
-    <div class="row" style="margin-top:25px;">
-        <div class="col-sm-12">
-            <p>CÔNG TY CỔ PHẦN ABC</p>
-            <p style="padding-left:150px"> Tòa nhà Sarica</p>
-        </div>
-    </div>
+<div class="col-md-12">
     <div class="row">
-        <div class="col-sm-12">
-            <h1 style="text-align:center; font-size:16px; font-weight:bold">DANH SÁCH ĐƠN VỊ</h1>
+        <div class="col-sm-4" style="padding-top:10px">
+            <select id="slStatus" class="form-control">
+                <option value="0">Tất cả</option>
+                <option value="1">Hoạt động</option>
+                <option value="2">Không hoạt động</option>
+            </select>
+        </div>
+        <div class="col-sm-8" style="padding-top:10px; padding-right: 0px">
+            <button class="myBtn btn btn-primary btn-sm" id="btnThongKe"><i class="fa fa-bar-chart" style="color: white; font-size: 14px; margin-left: -5px"></i> Thống kê</button>
+            <button id="btnExportToExcel" class="btn btn-success btn-sm" disabled><i class="fa fa-file-excel-o fa-fw" style="color:white; font-size:14px; margin-left:-5px"></i> Xuất ra file Excel</button>
+            <button id="btnInNoiDung" class="btn btn-warning btn-sm" disabled><i class="glyphicon glyphicon-print" style="color:white; font-size:14px; margin-left:-5px"></i> In nội dung</button>
         </div>
     </div>
-    <div id="content"></div>
-    <div class="row" style="margin-top:10px">
-        <div class="col-sm-12" style="text-align:right; font-style:italic">Ngày.......tháng.......năm............</div>
+    <div class="row" style="padding-left:20px; padding-right:20px; padding-top:15px">
+        <div class="col-sm-12" style="border-bottom:1px solid orange;"></div>
     </div>
-    <div class="row" style="margin-top:25px">
-        <div style="text-align:center; font-weight:bold; float:left; width:50%">Người lập</div>
-        <div style="text-align: center; font-weight: bold; float: left; width: 50%">Giám đốc</div>
+    <div class="box">
+        <div class="row box-body" style="margin:5px; margin-top:5px;" id="printDiv">
+            <div class="row" style="margin-top:25px;">
+                <div class="col-sm-12">
+                    <p>CÔNG TY CỔ PHẦN ABC</p>
+                    <p style="padding-left:150px"> Tòa nhà Sarica</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1 style="text-align:center; font-size:16px; font-weight:bold">DANH SÁCH ĐƠN VỊ</h1>
+                </div>
+            </div>
+            <div id="content"></div>
+            <div class="row" style="margin-top:10px">
+                <div class="col-sm-12" style="text-align:right; font-style:italic">Ngày.......tháng.......năm............</div>
+            </div>
+            <div class="row" style="margin-top:25px">
+                <div style="text-align:center; font-weight:bold; float:left; width:50%">Người lập</div>
+                <div style="text-align: center; font-weight: bold; float: left; width: 50%">Giám đốc</div>
+            </div>
+        </div>
     </div>
 </div>
 @*<div>

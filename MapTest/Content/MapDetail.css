@@ -1,0 +1,83 @@
+﻿#map {
+    height: 100%;
+}
+/* Optional: Makes the sample page fill the window. */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+}
+
+#modalBody1, #modalBody2 {
+    text-align: center;
+    width: auto;
+    height: auto;
+    display: inline-block;
+    margin: 1em;
+}
+
+p {
+    display: block;
+    width: 120px;
+    margin: 2em auto;
+    text-align: left;
+}
+
+#image-wrapper {
+    width: 100%;
+    height: auto;
+    position: relative;
+    background: #f6f6f6;
+    border: 2px solid #ddd;
+}
+
+    #image-wrapper img {
+        display: block;
+    }
+
+span.marker {
+    width: 32px;
+    height: 32px;
+    background-image: url('/Images/icon/icon/conRed32.png');
+    text-align: center;
+    position: absolute;
+    line-height: 32px;
+    cursor: pointer;
+}
+
+
+span.caption {
+    width: 180px;
+    background: #f66;
+    color: #fff;
+    padding: 4px;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    display: none;
+}
+
+.modal-header-custom {
+    background-color: #0099cc;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+    .modal-header-custom h5 {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+.modal-footer-custom {
+    background-color: #0099cc;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+#titleChart {
+    font-family: 'Montserrat', sans-serif;
+}

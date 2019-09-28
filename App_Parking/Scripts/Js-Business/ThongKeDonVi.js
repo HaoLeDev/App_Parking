@@ -74,14 +74,14 @@ var ThongKeDonVi = function () {
     });
 }
 function loadData(data) {
-    var tab = $("<table class='table table-bordered table-hover'></table>")
+    var tab = $("<table class='table table-bordered table-striped '></table>")
     var thead = $('<thead></thead>');
     thead.append('<th class="p5" style="text-align:center">STT</th>');
     thead.append('<th class="p5">Tên đơn vị</th>');
     thead.append('<th class="p5">Mã đơn vị</th>');
     //thead.append('<th class="p5 hidden-xs">Mô tả</th>');
     if ($("#slStatus").val() == 0) {
-        thead.append('<th class="p5 hidden-xs">Trạng thái</th>');
+        thead.append('<th class="p5 hidden-xs text-center">Trạng thái</th>');
     }
     tab.append(thead);
     if (data != null && data.length > 0) {
@@ -93,7 +93,7 @@ function loadData(data) {
             trow.append('<td>' + val.UNIT_CODE + '</td>');
             //trow.append('<td class="hidden-xs">' + val.UNIT_DES + '</td>');
             if ($("#slStatus").val() == 0) {
-                trow.append('<td class="hidden-xs">' + val.UNIT_STATUS+ '</td>');
+                trow.append('<td class="hidden-xs text-center">' + val.strUNIT_STATUS+ '</td>');
             }
             tab.append(trow);
         });

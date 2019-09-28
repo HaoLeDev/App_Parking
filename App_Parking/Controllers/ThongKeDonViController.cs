@@ -1,4 +1,6 @@
-﻿using App_Parking.Models;
+﻿using App_Parking.Common;
+using App_Parking.Models;
+using App_Parking.Models.View;
 using BusinessEntities;
 using System;
 using System.Collections;
@@ -24,12 +26,24 @@ namespace App_Parking.Controllers
         {
             return View();
         }
-        public JsonResult GetAll(ThongKeDonViModel model)
+        public JsonResult GetAll(JqueryDataTableParamModel model)
         {
             try
             {
                 var donvi = db.UNITs.ToList().OrderBy(s => s.UNIT_ID);
-                return this.Json(new { data = donvi, result = "success" }, JsonRequestBehavior.AllowGet);
+                var lst = donvi.Skip(model.iDisplayStart).Take(model.iDisplayLength).ToList();
+                var entity = new List<UnitViewModel>();
+                foreach (var temp in donvi)
+                {
+                    var tem = new UnitViewModel();
+                    tem.UNIT_CODE = temp.UNIT_CODE;
+                    tem.UNIT_DES = temp.UNIT_DES;
+                    tem.UNIT_ID = temp.UNIT_ID;
+                    tem.UNIT_NAME = temp.UNIT_NAME;
+                    tem.UNIT_STATUS = temp.UNIT_STATUS;
+                    entity.Add(tem);
+                }
+                return this.Json(new { data = entity, result = "success" }, JsonRequestBehavior.AllowGet);
             }
             catch(Exception ex)
             {

@@ -160,6 +160,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\content-admin\css\admin-print-browser.min.css" />
+    <Content Include="Assets\content-admin\css\animate.css" />
     <Content Include="Assets\content-admin\css\bootstrap.min.css" />
     <Content Include="Assets\content-admin\css\dataTables.bootstrap4.min.css" />
     <Content Include="Assets\content-admin\css\fixedColumns.bootstrap4.min.css" />
@@ -3451,7 +3452,6 @@
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\validation.es6.js" />
     <Content Include="uploads\ajaxloader.gif" />
-    <Content Include="Views\Login\Index1.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -3478,7 +3478,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="uploads\files\Excel\" />
     <Folder Include="Views\BaseController\" />
-    <Folder Include="Views\QuanLyKhacHang\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

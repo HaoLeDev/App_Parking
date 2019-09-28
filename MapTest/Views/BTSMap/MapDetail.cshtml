@@ -1,0 +1,54 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8">
+    <title>MapDetail</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="~/Content/MapDetail.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="map">
+    </div>
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header modal-header-custom">
+                    <button type="button" class="close" data-dismiss="modal" style="color:white;">x</button>
+                    <h5 class="modal-title text-uppercase">Bản đồ controller tại trạm BTS</h5>
+                </div>
+                <div class="modal-body">
+                    <div id="image-wrapper">
+                        <img src="~/Content/Images/NoDataAvailable.png" alt="" style="width: 100%; height: auto; display: inline-block" />
+                    </div>
+                </div>
+                <div class="modal-footer modal-footer-custom">
+                    <div class="col-sm-12 text-center text-uppercase" id="titleChart"></div>
+                    <div class="col-sm-6">
+                        <div id="modalBody1"></div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div id="modalBody2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/chart/raphael-2.1.4.min.js"></script>
+    <script src="~/Scripts/chart/justgage.js"></script>
+    <script src="~/Scripts/map/load-map.js"></script>
+    <script src="~/Scripts/map/markerclusterer.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCr1NUlyT72OCIf5NWys0dC27NodZkYWKI&callback=initMap"></script>
+    <script src="~/Scripts/jquery.gritter.js"></script>
+    <script src="~/Scripts/map/map-detail.js"></script>
+</body>
+</html>

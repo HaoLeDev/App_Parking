@@ -75,5 +75,15 @@ namespace App_Parking.Controllers
 
             return sbHash.ToString();
         }
+        public ActionResult LogOut()
+        {
+            // Xóa session đăng nhập
+            Session.Remove("USER_SESSION");
+            //Session.Remove("fullNameLogin");
+            //Session.Remove("userNameLogin");
+            //Session.Remove("passwordLogin");
+            //return Redirect(@Url.Content("~"));
+            return Redirect("~/Login");
+        }
     }
 }

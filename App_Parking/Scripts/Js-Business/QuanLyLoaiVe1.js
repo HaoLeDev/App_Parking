@@ -117,7 +117,6 @@ var LoaiVe = function () {
                 }
             }
         });
-
         //khi người dùng click vào nút sửa
         $('#tblTicketType tbody').on('click', '.fa-pencil', function (e) {
             //self.RemoveToolTip();

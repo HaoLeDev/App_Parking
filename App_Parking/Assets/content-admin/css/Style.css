@@ -24,3 +24,9 @@
 .show-display{
     display:block;
 }
+.table thead tr th{
+    text-align:center;
+}
+.widthfull {
+    width: 100% !important;
+}

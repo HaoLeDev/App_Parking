@@ -45,6 +45,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -156,11 +162,42 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\Api\CardController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Data\ACCOUNT.cs" />
+    <Compile Include="Data\BARCODE.cs" />
+    <Compile Include="Data\CARD_NO.cs" />
+    <Compile Include="Data\CARD_TYPE.cs" />
+    <Compile Include="Data\CONTROLLER.cs" />
+    <Compile Include="Data\DEPARTMENT.cs" />
+    <Compile Include="Data\DETAIL_SALE.cs" />
+    <Compile Include="Data\DEVICE.cs" />
+    <Compile Include="Data\DEVICE_TYPE.cs" />
+    <Compile Include="Data\DISCOUNT.cs" />
+    <Compile Include="Data\DISCOUNT_TYPE.cs" />
+    <Compile Include="Data\EMPLOYEE.cs" />
+    <Compile Include="Data\GAME_SPORT.cs" />
+    <Compile Include="Data\HOLIDAY.cs" />
+    <Compile Include="Data\IO_INFO.cs" />
+    <Compile Include="Data\MENULIST.cs" />
+    <Compile Include="Data\PRIVILE.cs" />
+    <Compile Include="Data\TIME_FRAME.cs" />
+    <Compile Include="Data\TICKET_PRICE.cs" />
+    <Compile Include="Data\TICKET_SALE.cs" />
+    <Compile Include="Data\TICKET_TYPE.cs" />
+    <Compile Include="Data\TIME_FRAME_ACTIVE.cs" />
+    <Compile Include="Data\UNIT.cs" />
+    <Compile Include="Data\USER_INFO.cs" />
+    <Compile Include="Data\USER_TYPE.cs" />
+    <Compile Include="Data\VISIBLECONTROL.cs" />
+    <Compile Include="Data\WEEKDAY.cs" />
+    <Compile Include="Data\ZONE.cs" />
+    <Compile Include="Db\PackingDbContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CardModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -212,7 +249,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+    <Folder Include="Views\Card\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

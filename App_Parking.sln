@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29209.62
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App_Parking", "App_Parking\App_Parking.csproj", "{D5543A38-F185-4A70-9B98-160DEEF82414}"
 EndProject
@@ -14,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DA", "DA\DA.csproj", "{F30BB1FB-34A5-4457-A785-35CB0B5F8E1B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessRepository", "BusinessRepository\BusinessRepository.csproj", "{7C17E689-4BE9-4D6E-93D7-1AAC5936874E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapTest", "MapTest\MapTest.csproj", "{00E41E3A-7714-4B1E-B206-5D60936AA5F0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{7C17E689-4BE9-4D6E-93D7-1AAC5936874E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C17E689-4BE9-4D6E-93D7-1AAC5936874E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C17E689-4BE9-4D6E-93D7-1AAC5936874E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00E41E3A-7714-4B1E-B206-5D60936AA5F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00E41E3A-7714-4B1E-B206-5D60936AA5F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00E41E3A-7714-4B1E-B206-5D60936AA5F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00E41E3A-7714-4B1E-B206-5D60936AA5F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -14,6 +14,19 @@
                 $("#Password").focus();
                 return false;
             }
+        },
+        LogOut: function () {
+            bootbox.confirm("Bạn muốn đăng xuất?", function () {
+                $.ajax({
+                    url: 'Login/LogOut',
+                    type: 'Post',
+                    dataType: 'json',
+                    success: function () {     
+                    }
+                });
+                
+            })
+            
         }
     }
 }();

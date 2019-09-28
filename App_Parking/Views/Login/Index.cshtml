@@ -3,49 +3,15 @@
     ViewBag.Title = "Login1";
     Layout = "~/Views/Shared/_Layout_Login.cshtml";
 }
-@*<script>
-    $(document).ready(function () {
-        $("#btnLogin").click(function () {
-            if ($("#UserName").val() == "") {
-                alertmsg.error("Bạn chưa nhập tên đăng nhập!");
-                //alertmsg.success("Đăng nhập thành công");
-                $("#UserName").focus();
-                return false;     
-            }
-            if ($("#Password").val() == "") {
-                alertmsg.error("Bạn chưa nhập mật khẩu!");
-                $("#Password").focus();
-                return false;
-            }
-            alertmsg.success("Đăng nhập thành công");
-            //$.ajax({
-            //    type: 'post',
-            //    url: 'Login',
-            //    data: JSON.stringify({ Accout: _account }),
-            //    dataType: 'json',
-            //    contentType: 'application/json',
-            //    success: function (res) {
-            //        alertmsg.success("Đăng nhập thành công");
-            //    },
-            //    error: function () {
-            //        alertmsg.error("Tên tài khoản hoặc mật khẩu không chính xác!");
-            //    }
-            //})
-        })
-        
-    });
-</script>*@
 @using (Html.BeginForm("Login", "Login"))
 
 {
 <div class="login-box">
-    <div class="login-logo">
-        <a href="#"><b>Đăng nhập</b></a>
-    </div>
     <!-- /.login-logo -->
     <div class="login-box-body">
-        <p class="login-box-msg">Đăng nhập hệ thống</p>
-
+        <div class="login-logo">
+            <a href="#"><b>Đăng nhập</b></a>
+        </div>
         <form action="#" method="post" id="loginForm">
             @Html.ValidationSummary(false, "", new { @class = "text-danger" })
             <div class="form-group has-feedback">
@@ -71,23 +37,6 @@
                 <!-- /.col -->
             </div>
         </form>
-
-        <div class="social-auth-links text-center">
-            <p>- Hoặc -</p>
-            <a href="#" class="btn btn-block btn-social btn-facebook btn-flat">
-                <i class="fa fa-facebook"></i> Đăng nhập với
-                Facebook
-            </a>
-            <a href="#" class="btn btn-block btn-social btn-google btn-flat">
-                <i class="fa fa-google-plus"></i> Đăng nhập với
-                Google+
-            </a>
-        </div>
-        <!-- /.social-auth-links -->
-
-        <a href="#">Quên mật khẩu</a><br>
-        <a href="register.html" class="text-center">Đăng ký</a>
-
     </div>
     <!-- /.login-box-body -->
 </div>
